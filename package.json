@@ -1,5 +1,5 @@
 {
-  "name": "orange.tech",
+  "name": "btcbrochure",
   "private": true,
   "scripts": {
     "dev": "next dev",
