@@ -1,5 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image';
 import React from 'react'
 import AlwaysOn from '../components/alwaysOn';
 import AssetComparison from '../components/assetComparison';
@@ -68,7 +69,10 @@ const Home: NextPage = (props: any) => {
 
         <Disclaimer />
 
-        <a className="mt-16 mb-24 opacity-20 hover:opacity-60" href="https://twitter.com/btcbrochure"><img width={64} height={64} src="/twitter.svg" /></a>
+        <div className="flex flex-row space-x-4">
+          <a className="mt-16 mb-24 opacity-20 hover:opacity-60" href="https://twitter.com/btcbrochure"><Image width={64} height={64} alt="Twitter account" src="/twitter.svg" /></a>
+          <a className="mt-16 mb-24 opacity-20 hover:opacity-60" href="https://github.com/btcadman/btcbrochure"><Image width={64} height={64} alt="GitHub repo" src="/github.png" /></a>
+        </div>
       </main>
     </div>
   )
