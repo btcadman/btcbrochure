@@ -24,7 +24,7 @@ export default function AlwaysOn() {
             title="Hours of operation"
             bars={[
               { label: "Bitcoin", value: 24 * 365, scale: 24 * 365 },
-              { label: "Fedwire", value: (22 * 5 * 52) - (24 * 11), scale: 24 * 7 * 365, dull: true },
+              { label: "Fedwire", value: (22 * 5 * 52) - (24 * 11), scale: 24 * 365, dull: true },
             ]}
           />
         </div>  
