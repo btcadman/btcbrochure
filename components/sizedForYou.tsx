@@ -38,7 +38,7 @@ export default function SizedForYou() {
 
   return (
     <PitchPoint title="Sized for you" slug="sizes">
-      <Highlight>No need to buy a whole bitcoin at a time.</Highlight> Each bitcoin divides into 100 million parts, called satoshis—or <i>sats</i>, for short. Buy as many sats as you need, to store your wealth. <a href="https://strike.me/">Get {new Intl.NumberFormat().format(satsPerDollar)} sats for just $1</a>. Or <a href="http://river.com/bitcoin-price">buy a whole bitcoin for ${new Intl.NumberFormat().format(Math.round(btcPrice))}</a>. With a trillion-dollar market cap, Bitcoin has the liquidity to store even the largest fortunes.
+      <Highlight>No need to buy a whole bitcoin at a time.</Highlight> Each bitcoin divides into 100 million parts, called satoshis—or <i>sats</i>, for short. You can buy as many sats as you need, to store your wealth. <a href="https://strike.me/">{new Intl.NumberFormat().format(satsPerDollar)} sats cost just $1</a>. And <a href="http://river.com/bitcoin-price">a whole bitcoin is just ${new Intl.NumberFormat().format(Math.round(btcPrice))}</a>. With a trillion-dollar market cap, Bitcoin has the liquidity to store even the largest fortunes.
       
       <div className="text-2xl dark:text-apple-white text-apple-black mt-8">Sample conversions <span className="text-apple-gray dark:text-apple-lightgray">(LIVE)</span></div>
 
