@@ -18,6 +18,7 @@ import Tax from '../components/tax';
 import TradingTime from '../components/tradingTime';
 import Transfers from '../components/transfers';
 import Worldwide from '../components/worldwide';
+import { fetchHashRate } from './api/hashRate';
 
 const Home: NextPage = (props: any) => {
   const { numNodes, hashRate } = props;
@@ -84,12 +85,6 @@ async function fetchNumNodes(): Promise<number> {
   const res = await fetch(`https://bitnodes.io/api/v1/snapshots/`)
   const data = await res.json()
   return data?.results?.[0]?.total_nodes;
-}
-
-async function fetchHashRate(): Promise<number> {
-  const res = await fetch(`https://insights.braiins.com/api/v1.0/hash-rate-stats`)
-  const data = await res.json()
-  return data?.hash_rate_30;
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {

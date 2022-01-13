@@ -2,8 +2,7 @@ import React from "react";
 import useSWR from "swr";
 import Highlight from "./highlight";
 import PitchPoint from "./pitchPoint";
-
-const fetcher = (url: string) => fetch(url).then(res => res.json());
+import { fetcher } from "../lib";
 
 export default function SizedForYou() {
   const { data, error } = useSWR("/api/price", fetcher, { refreshInterval: 10 * 1000 });

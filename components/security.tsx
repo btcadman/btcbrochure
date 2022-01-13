@@ -1,9 +1,16 @@
 import React from "react";
+import useSWR from "swr";
 import Highlight from "./highlight";
 import PitchPoint from "./pitchPoint";
+import { fetcher } from "../lib";
 
-export default function Security({ hashRate }: { hashRate: number }) {
+export default function Security(props: { hashRate: number }) {
   const exa = 1E18;
+
+  const { data } = useSWR("/api/hashRate", fetcher);
+
+  const hashRate = data?.hashRate ?? props.hashRate;
+
   const longHashRate = hashRate * exa;
   
   return (
