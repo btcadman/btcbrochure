@@ -30,8 +30,8 @@ function useFootnote(slug: string, footnote: React.ReactNode) {
   const number = footnotes.size;
 
   return (
-    <sup>
-      <a href={`#${href(slug)}`}>{number}</a>
+    <sup id={originHref(slug)}>
+      <a href={`#${footnoteHref(slug)}`}>{number}</a>
     </sup>
   )
 }
@@ -41,7 +41,11 @@ function useFootnotes() {
   return footnotes;
 }
 
-function href(slug: string) {
+function originHref(slug: string) {
+  return `footnote-origin-${slug}`;
+}
+
+function footnoteHref(slug: string) {
   return `footnote-${slug}`;
 }
 
@@ -56,18 +60,18 @@ export function Footnotes() {
   let number = 1;
   footnotes.forEach((footnote, slug) => {
     els.push(
-      <div key={slug} id={href(slug)} className="overflow-ellipsis overflow-hidden">
-        <span className="mr-2">{number}.</span>
+      <li key={slug} id={footnoteHref(slug)} className="overflow-ellipsis overflow-hidden">
         {footnote}
-      </div>
+        <span className="ml-2">[<a href={`#${originHref(slug)}`} >⇡</a>]</span>
+      </li>
     );
 
     number += 1;
   });
 
   return (
-    <div className="mt-16 max-w-full">
+    <ol className="mt-16 max-w-full list-decimal list-inside space-y-1 text-sm text-apple-gray dark:text-apple-lightgray">
       { els }
-    </div>
+    </ol>
   )
 }
