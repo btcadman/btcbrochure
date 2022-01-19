@@ -3,6 +3,7 @@ interface IBar {
   value: number;
   scale: number; // Value to scale against.
   dull?: boolean; // Visually marks this as the worst option.
+  break?: boolean; // Place break in middle of bar.
 }
 
 function Bar({ bar }: { bar: IBar }) {
@@ -16,7 +17,9 @@ function Bar({ bar }: { bar: IBar }) {
   return (
     <div className="mt-5 flex flex-row justify-items-start">
       <div style={{ width }}>
-        <div style={{ background }} className="h-1.5 rounded-md mb-1.5 mt-3" />
+        <div style={{ background }} className="h-1.5 rounded-md mb-1.5 mt-3 flex flex-col content-center items-center justify-center">
+          {bar.break && <div className="flex-1 flex text-sm dark:bg-black bg-white px-2 italic">{`/`}</div>}
+        </div>
         <div className={`font-normal text-xl ${labelClass}`}>{label}</div>
       </div>
       <div className={`ml-3 text-3xl ${valueClass}`}>{new Intl.NumberFormat().format(value)}</div>

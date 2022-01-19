@@ -20,6 +20,7 @@ import Transfers from '../components/transfers';
 import Worldwide from '../components/worldwide';
 import { FootnoteContextProvider, Footnotes } from '../components/footnotes';
 import { fetchHashRate } from './api/hashRate';
+import Energy from '../components/energy';
 
 const Home: NextPage = (props: any) => {
   const { numNodes, hashRate } = props;
@@ -61,6 +62,8 @@ const Home: NextPage = (props: any) => {
           <Auditable numNodes={numNodes} />
 
           <Security hashRate={hashRate} />
+
+          <Energy />
 
           <Resilient />
 
