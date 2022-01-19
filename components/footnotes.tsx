@@ -56,7 +56,7 @@ export function Footnotes() {
   let number = 1;
   footnotes.forEach((footnote, slug) => {
     els.push(
-      <div key={slug} id={href(slug)}>
+      <div key={slug} id={href(slug)} className="overflow-ellipsis overflow-hidden">
         <span className="mr-2">{number}.</span>
         {footnote}
       </div>
@@ -66,7 +66,7 @@ export function Footnotes() {
   });
 
   return (
-    <div className="mt-16">
+    <div className="mt-16 max-w-full">
       { els }
     </div>
   )
