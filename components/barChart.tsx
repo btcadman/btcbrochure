@@ -1,5 +1,5 @@
 interface IBar {
-  label: string;
+  label: string | React.ReactElement;
   value: number;
   scale: number; // Value to scale against.
   dull?: boolean; // Visually marks this as the worst option.

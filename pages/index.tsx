@@ -18,6 +18,7 @@ import Tax from '../components/tax';
 import TradingTime from '../components/tradingTime';
 import Transfers from '../components/transfers';
 import Worldwide from '../components/worldwide';
+import { FootnoteContextProvider, Footnotes } from '../components/footnotes';
 import { fetchHashRate } from './api/hashRate';
 
 const Home: NextPage = (props: any) => {
@@ -38,37 +39,41 @@ const Home: NextPage = (props: any) => {
           <p className="max-w-xl text-2xl text-center">Bitcoin is <a href="https://twitter.com/saylor/status/1307029562321231873?s=20">a swarm of cyber hornets</a>. Bitcoin is <a href="https://saifedean.com/thebitcoinstandard/">the decentralized alternative to central banking</a>. Bitcoin is <a href="https://satoshi.nakamotoinstitute.org/emails/cryptography/11/">the solution to the Byzantine Generals&rsquo; Problem</a>. Bitcoin is <a href="https://twitter.com/StopAndDecrypt/status/1002666361489969153">an impenetrable fortress of validation</a>. Bitcoin is <a href="https://twitter.com/BitcoinIsSaving/status/1154202015423184898?s=20">the next world reserve currency</a>.</p>
         </div>
 
-        <Intro />
+        <FootnoteContextProvider>
+          <Intro />
 
-        <Inflation />
+          <Inflation />
 
-        <Returns />
+          <Returns />
 
-        <AssetComparison />
+          <AssetComparison />
 
-        <Tax />
+          <Tax />
 
-        <AlwaysOn />
+          <AlwaysOn />
 
-        <TradingTime />
-        
-        <LowFees />
-        
-        <Transfers />
-        
-        <Auditable numNodes={numNodes} />
+          <TradingTime />
+          
+          <LowFees />
+          
+          <Transfers />
+          
+          <Auditable numNodes={numNodes} />
 
-        <Security hashRate={hashRate} />
+          <Security hashRate={hashRate} />
 
-        <Resilient />
+          <Resilient />
 
-        <Portable />
+          <Portable />
 
-        <Worldwide />
+          <Worldwide />
 
-        <SizedForYou />
+          <SizedForYou />
 
-        <Disclaimer />
+          <Disclaimer />
+
+          <Footnotes />
+        </FootnoteContextProvider>
 
         <div className="flex flex-row space-x-4">
           <a className="mt-16 mb-24 opacity-20 hover:opacity-60" href="https://twitter.com/btcbrochure"><Image width={64} height={64} alt="Twitter account" src="/twitter.svg" /></a>

@@ -1,5 +1,6 @@
 import React from "react";
 import BarChart from "./barChart";
+import { Footnote } from "./footnotes";
 import Highlight from "./highlight";
 import PitchPoint from "./pitchPoint";
 
@@ -23,14 +24,38 @@ export default function AlwaysOn() {
             title="Days of operation"
             bars={[
               { label: "Bitcoin", value: 365, scale: 365 },
-              { label: "Fedwire", value: 365 - (11 + 2 * 52), scale: 365, dull: true },
+              {
+                label: (
+                  <span>
+                    Fedwire
+                    <Footnote slug="fedwire-days">
+                      <a href="https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm">https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm</a>
+                    </Footnote>
+                  </span>
+                ),
+                value: 365 - (11 + 2 * 52),
+                scale: 365,
+                dull: true,
+              },
             ]}
           />
           <BarChart
             title="Hours of operation"
             bars={[
               { label: "Bitcoin", value: 24 * 365, scale: 24 * 365 },
-              { label: "Fedwire", value: (22 * 5 * 52) - (24 * 11), scale: 24 * 365, dull: true },
+              {
+                label: (
+                  <span>
+                    Fedwire
+                    <Footnote slug="fedwire-hours">
+                      <a href="https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm">https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm</a>
+                    </Footnote>
+                  </span>
+                ),
+                value: (22 * 5 * 52) - (24 * 11),
+                scale: 24 * 365,
+                dull: true,
+              },
             ]}
           />
         </div>  
