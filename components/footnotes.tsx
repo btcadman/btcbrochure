@@ -31,7 +31,7 @@ function useFootnote(slug: string, footnote: React.ReactNode) {
 
   return (
     <sup id={originHref(slug)}>
-      <a href={`#${footnoteHref(slug)}`}>{number}</a>
+      <a href={`#${footnoteHref(slug)}`} className="text-apple-gray dark:text-apple-lightgray hover:text-orange-500">{number}</a>
     </sup>
   )
 }
