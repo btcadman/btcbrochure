@@ -29,7 +29,7 @@ export default function AlwaysOn() {
                   <span>
                     Fedwire
                     <Footnote slug="fedwire-days">
-                      <a href="https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm">https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm</a>
+                      <a href="https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm">U.S. Federal Reserve, <i>Fedwire Funds Services</i></a>
                     </Footnote>
                   </span>
                 ),
@@ -48,7 +48,7 @@ export default function AlwaysOn() {
                   <span>
                     Fedwire
                     <Footnote slug="fedwire-hours">
-                      <a href="https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm">https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm</a>
+                      <a href="https://www.federalreserve.gov/paymentsystems/fedfunds_about.htm">U.S. Federal Reserve, <i>Fedwire Funds Services</i></a>
                     </Footnote>
                   </span>
                 ),

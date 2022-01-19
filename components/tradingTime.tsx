@@ -23,7 +23,7 @@ export default function TradingTime() {
                   <span>
                     NYSE
                     <Footnote slug="nyse-days">
-                      <a href="https://www.nyse.com/publicdocs/Trading_Days.pdf">https://www.nyse.com/publicdocs/Trading_Days.pdf</a>
+                      <a href="https://www.nyse.com/publicdocs/Trading_Days.pdf">NYSE, <i>Trading Days</i></a>
                     </Footnote>
                   </span>
                 ),
@@ -44,7 +44,8 @@ export default function TradingTime() {
                   <span>
                     NYSE
                     <Footnote slug="nyse-hours">
-                      <a href="https://www.nyse.com/markets/hours-calendars">https://www.nyse.com/markets/hours-calendars</a>
+                      <a href="https://www.nyse.com/markets/hours-calendars">NYSE, <i>Holidays &amp;
+Trading Hours</i></a>
                     </Footnote>
                   </span>
                 ),
