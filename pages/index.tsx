@@ -21,6 +21,7 @@ import Worldwide from '../components/worldwide';
 import { FootnoteContextProvider, Footnotes } from '../components/footnotes';
 import { fetchHashRate } from './api/hashRate';
 import Energy from '../components/energy';
+import { fetchNumNodes } from './api/nodeCount';
 
 const Home: NextPage = (props: any) => {
   const { numNodes, hashRate } = props;
@@ -88,12 +89,6 @@ const Home: NextPage = (props: any) => {
 }
 
 export default Home
-
-async function fetchNumNodes(): Promise<number> {
-  const res = await fetch(`https://bitnodes.io/api/v1/snapshots/`)
-  const data = await res.json()
-  return data?.results?.[0]?.total_nodes;
-}
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const numNodes = await fetchNumNodes();
