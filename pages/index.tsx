@@ -36,7 +36,7 @@ const Home: NextPage = (props: any) => {
       <main className="p-4 dark:bg-black dark:text-apple-white text-apple-black flex flex-col items-center">
         <h1 className="text-center my-16 text-7xl font-semibold">Bitcoin</h1>
 
-        <div className="flex flex-col items-center font-semibold mb-12">
+        <div className="flex flex-col items-center font-semibold mb-8">
           <div className="max-w-xl text-6xl">Civilization-<div>strength <span className="text-orange-500">money</span>.</div></div>
         </div>
 
