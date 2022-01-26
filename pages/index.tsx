@@ -22,6 +22,7 @@ import { FootnoteContextProvider, Footnotes } from '../components/footnotes';
 import { fetchHashRate } from './api/hashRate';
 import Energy from '../components/energy';
 import { fetchNumNodes } from './api/nodeCount';
+import Adoption from '../components/adoption';
 
 const Home: NextPage = (props: any) => {
   const { numNodes, hashRate } = props;
@@ -37,8 +38,6 @@ const Home: NextPage = (props: any) => {
 
         <div className="flex flex-col items-center font-semibold mb-12">
           <div className="max-w-xl mb-20 text-6xl">Civilization-<div>strength <span className="text-orange-500">money</span>.</div></div>
-
-          <p className="max-w-xl text-2xl text-center">Bitcoin is <a href="https://saifedean.com/thebitcoinstandard/">the decentralized alternative to central banking</a>. Bitcoin is <a href="https://satoshi.nakamotoinstitute.org/emails/cryptography/11/">the solution to the Byzantine Generals&rsquo; Problem</a>. Bitcoin is <a href="https://twitter.com/StopAndDecrypt/status/1002666361489969153">an impenetrable fortress of validation</a>. Bitcoin is <a href="https://twitter.com/BitcoinIsSaving/status/1154202015423184898?s=20">the next world reserve currency</a>.</p>
         </div>
 
         <FootnoteContextProvider>
@@ -71,6 +70,8 @@ const Home: NextPage = (props: any) => {
           <Portable />
 
           <Worldwide />
+
+          <Adoption />
 
           <SizedForYou />
 
