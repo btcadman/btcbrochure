@@ -21,7 +21,7 @@ export default function AssetComparison() {
     },
     {
       label: "Stocks",
-      view: <FeatureList><Highlight>Like the best tech companies, Bitcoin has <a href="https://nakamotoinstitute.org/mempool/the-seven-network-effects-of-bitcoin/">network effects</a> that tend toward <a href="https://www.wsj.com/articles/peter-thiel-competition-is-for-losers-1410535536">monopoly</a> in its market.</Highlight> What market? Store-of-value. TAM: over $100 trillion. Combined with an unbeatable marketing engine, where every owner becomes an evangelist, what stock has better upside?</FeatureList>,
+      view: <FeatureList><Highlight>Like the best tech companies, Bitcoin has <a href="https://nakamotoinstitute.org/mempool/the-seven-network-effects-of-bitcoin/">network effects</a> that tend toward <a href="https://www.wsj.com/articles/peter-thiel-competition-is-for-losers-1410535536">monopoly</a> in its market.</Highlight> What market? Store-of-value. TAM: <a href="https://www.lopp.net/pdf/theses/BVI-Macro-Outlook.pdf">over $100 trillion</a>.</FeatureList>,
     },
     {
       label: "Real Estate",
